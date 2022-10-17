@@ -56,11 +56,11 @@ p.para {
   text-align: center;
   width: 65%;
   display: block;
-  margin: auto;
+  /* margin: auto;
   color: rgb(144, 133, 133);
   font-family: "Fuzzy Bubbles", cursive;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 18px; */
 }
 .card.cardss {
   width: 18rem;
