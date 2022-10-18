@@ -1,8 +1,78 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import Card from "react-bootstrap/Card";
+import bmw from "../images/bmw.webp";
+import ecosports from "../images/ecosports.webp";
+import audiia6 from "../images/audiia6.webp";
+import MercedesBenz from "../images/Mercedes-Benz.webp";
+import marutee from "../images/maruti-800.webp";
+import swift from "../images/swift.webp";
+import Slider from "react-slick";
 
 function Main2() {
+  const availableCars = [
+    {
+      carname: "AUDI A6",
+      image: [audiia6],
+      desc: "Check out the latest audi model here!",
+      price: "5000rs per/week",
+    },
+    {
+      carname: "SWIFT base model",
+      image: [swift],
+      desc: "Check out the latest swift model here!",
+      price: "900rs per/week",
+    },
+    {
+      carname: "ECOSPORTS",
+      image: [ecosports],
+      desc: "Check out the latest ECOSPORTS model here!",
+      price: "1000rs per/week",
+    },
+    {
+      carname: "BMW",
+      image: [bmw],
+      desc: "Check out the latest BMW model here!",
+      price: "5500rs per/week",
+    },
+    {
+      carname: "MERCEDES BENZ",
+      image: [MercedesBenz],
+      desc: "Check out the latest MERCEDES BENZ model here!",
+      price: "5700rs per/week",
+    },
+    {
+      carname: "MARUTI 800",
+      image: [marutee],
+      desc: "Check out the latest MARUTEE 800 model here!",
+      price: "600rs per/week",
+    },
+  ];
+
+  const renderCars = (availableCars, index) => {
+    return (
+      <div className="col-lg-3 col-md-6 col-sm-12" key={index}>
+        <div
+          class="card"
+          style={{
+            width: "18rem",
+            display: "block",
+            margin: "auto",
+            border: "1px solid #832de8",
+            maxHeight: "500px",
+          }}
+        >
+          <img src={availableCars.image} class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title text-center">{availableCars.carname}</h5>
+            <p class="card-text">{availableCars.desc}</p>
+            <p className="text-center" style={{ color: "#832de8" }}>
+              {availableCars.price}
+            </p>
+          </div>
+        </div>
+      </div>
+    );
+  };
   return (
     <div>
       <Container>
@@ -19,63 +89,48 @@ function Main2() {
             neque similique sint eum.
           </p>
         </div>
-
-        <div className="cardarea my-5">
-          {/* <div className="row">{servicesInfo.map(renderServices)}</div>*/}
-          <div className="row">
-            <div className="col-lg-3 col-md-6 col-sm-12">
-              <div class="card" style={{ width: "18rem" }}>
-                <img src="..." class="card-img-top" alt="..." />
-                <div class="card-body">
-                  <h5 class="card-title">Mercedes models -</h5>
-                  <p class="card-text">
-                    Check out the latest Mercedes models here!
-                  </p>
-                  <a href="/" class="btn btn-primary">
-                    CAR DETAILS
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-3 col-md-6 col-sm-12">
-            <div class="card" style={{ width: "18rem" }}>
-              <img src="..." class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Audi models -</h5>
-                <p class="card-text">Check out the latest Audi models here!</p>
-                <a href="/" class="btn btn-primary">
-                  CAR DETAILS
-                </a>
-            </div>
-              </div>
-            </div>
-            <div className="col-lg-3 col-md-6 col-sm-12">
-            <div class="card" style={{ width: "18rem" }}>
-              <img src="..." class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">BMW models -</h5>
-                <p class="card-text">Check out the latest BMW models here!</p>
-                <a href="/" class="btn btn-primary">
-                  CAR DETAILS
-                </a>
-              </div>
-              </div>
-            </div>
-            <div className="col-lg-3 col-md-6 col-sm-12">
-            <div class="card" style={{ width: "18rem" }}>
-              <img src="..." class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Jaguar models -</h5>
-                <p class="card-text">
-                  Check out the latest Jaguar models here!
-                </p>
-                <a href="/" class="btn btn-primary">
-                  CAR DETAILS
-                </a>
-              </div>
-              </div>
-            </div>
-          </div>
+        <div className="slider-container my-4">
+          <Slider
+            dots={true}
+            slidesToShow={3}
+            slidesToScroll={1}
+            autoplay={false}
+            autoplaySpeed={3100}
+            responsive={[
+              {
+                breakpoint: 600,
+                settings: {
+                  slidesToShow: 2,
+                  slidesToScroll: 2,
+                  initialSlide: 2,
+                },
+              },
+              {
+                breakpoint: 1280,
+                settings: {
+                  slidesToShow: 3,
+                  slidesToScroll: 2,
+                  initialSlide: 2,
+                },
+              },
+              {
+                breakpoint: 912,
+                settings: {
+                  slidesToShow: 2,
+                  slidesToScroll: 1,
+                  initialSlide: 2,
+                },
+              },
+              {
+                breakpoint: 540,
+                settings: {
+                  slidesToShow: 1,
+                },
+              },
+            ]}
+          >
+            {availableCars.map(renderCars)}
+          </Slider>
         </div>
       </Container>
     </div>
