@@ -50,6 +50,8 @@ export default function Testimonials() {
         <div
           class="card"
           style={{
+            display: "block",
+            margin: "auto",
             width: "23rem",
             borderRadius: "10px",
             border: "1px solid #832de8",
@@ -75,7 +77,7 @@ export default function Testimonials() {
 
   return (
     <div>
-      <Container>
+      <Container fluid>
         <div className="main-area my-5 py-2">
           <h1 className="heading">
             What Our Happy Clients say about us
@@ -95,7 +97,7 @@ export default function Testimonials() {
             dots={true}
             slidesToShow={3}
             slidesToScroll={1}
-            autoplay={false}
+            autoplay={true}
             autoplaySpeed={3100}
             responsive={[
               {

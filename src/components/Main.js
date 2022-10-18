@@ -47,7 +47,7 @@ export default function Main() {
 
   return (
     <div>
-      <Container>
+      <Container fluid>
         <div className="main-area">
           <h1 className="heading">
             WELCOME TO <br /> <span className="spanarea">CAR RENTAL WORLD</span>

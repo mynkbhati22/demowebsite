@@ -75,7 +75,7 @@ function Main2() {
   };
   return (
     <div>
-      <Container>
+      <Container fluid>
         <div className="main-area">
           <h1 className="heading">
             CHECK OUT OUR <br /> <span className="spanarea">RECENT CARS</span>
