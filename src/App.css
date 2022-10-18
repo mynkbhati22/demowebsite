@@ -2,6 +2,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&display=swap");
+@import "~slick-carousel/slick/slick.css"; 
+@import "~slick-carousel/slick/slick-theme.css";
+
+
 
 .container-fluid {
   max-width: 1440px;

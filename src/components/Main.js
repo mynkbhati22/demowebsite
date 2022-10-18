@@ -63,7 +63,45 @@ export default function Main() {
         </div>
 
         <div className="cardarea my-5">
-          <div className="row">{servicesInfo.map(renderServices)}</div>
+          {/* <div className="row">{servicesInfo.map(renderServices)}</div>*/}
+          <div className="row">
+            <div className="col-lg-3 col-md-6 col-sm-12">
+              <Card className="cardss">
+                {/* <div className="cardimg">{servicesInfo.image}</div> */}
+                <Card.Body>
+                  <Card.Title>hello</Card.Title>
+                  <Card.Text>byyee</Card.Text>
+                </Card.Body>
+              </Card>
+            </div>
+            <div className="col-lg-3 col-md-6 col-sm-12">
+              <Card className="cardss">
+                {/* <div className="cardimg">{servicesInfo.image}</div> */}
+                <Card.Body>
+                  <Card.Title>hello</Card.Title>
+                  <Card.Text>byyee</Card.Text>
+                </Card.Body>
+              </Card>
+            </div>
+            <div className="col-lg-3 col-md-6 col-sm-12">
+              <Card className="cardss">
+                {/* <div className="cardimg">{servicesInfo.image}</div> */}
+                <Card.Body>
+                  <Card.Title>hello</Card.Title>
+                  <Card.Text>byyee</Card.Text>
+                </Card.Body>
+              </Card>
+            </div>
+            <div className="col-lg-3 col-md-6 col-sm-12">
+              <Card className="cardss">
+                {/* <div className="cardimg">{servicesInfo.image}</div> */}
+                <Card.Body>
+                  <Card.Title>hello</Card.Title>
+                  <Card.Text>byyee</Card.Text>
+                </Card.Body>
+              </Card>
+            </div>
+          </div>
         </div>
       </Container>
     </div>
